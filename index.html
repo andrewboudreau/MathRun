@@ -363,6 +363,181 @@
                     { x: 250, y: 400, value: -1 },
                     { x: 450, y: 400, value: -1 }
                 ]
+            },
+            // Level 6 - Introducing x2
+            {
+                name: "Double Trouble",
+                doorReq: 8,
+                playerStart: { x: 50, y: 400 },
+                door: { x: 720, y: 380 },
+                platforms: [
+                    { x: 0, y: 450, width: 800, height: 50 },
+                    { x: 200, y: 350, width: 100, height: 20 },
+                    { x: 400, y: 280, width: 100, height: 20 },
+                    { x: 600, y: 350, width: 100, height: 20 }
+                ],
+                collectibles: [
+                    { x: 100, y: 400, value: 1 },
+                    { x: 230, y: 300, value: 1 },
+                    { x: 430, y: 230, value: 'x2' },
+                    { x: 630, y: 300, value: 1 },
+                    { x: 300, y: 400, value: 1 },
+                    { x: 500, y: 400, value: -1 }
+                ]
+            },
+            // Level 7 - Multiplier madness
+            {
+                name: "Multiplier Path",
+                doorReq: 16,
+                playerStart: { x: 50, y: 400 },
+                door: { x: 720, y: 100 },
+                platforms: [
+                    { x: 0, y: 450, width: 200, height: 50 },
+                    { x: 250, y: 380, width: 80, height: 20 },
+                    { x: 380, y: 310, width: 80, height: 20 },
+                    { x: 510, y: 240, width: 80, height: 20 },
+                    { x: 640, y: 170, width: 160, height: 20 }
+                ],
+                collectibles: [
+                    { x: 100, y: 400, value: 1 },
+                    { x: 270, y: 330, value: 'x2' },
+                    { x: 400, y: 260, value: 'x2' },
+                    { x: 530, y: 190, value: 'x2' },
+                    { x: 700, y: 120, value: 1 },
+                    { x: 150, y: 400, value: -1 },
+                    { x: 350, y: 400, value: -1 }
+                ]
+            },
+            // Level 8 - Zigzag
+            {
+                name: "Zigzag",
+                doorReq: 10,
+                playerStart: { x: 50, y: 150 },
+                door: { x: 720, y: 380 },
+                platforms: [
+                    { x: 0, y: 200, width: 150, height: 20 },
+                    { x: 200, y: 280, width: 120, height: 20 },
+                    { x: 380, y: 200, width: 120, height: 20 },
+                    { x: 560, y: 280, width: 120, height: 20 },
+                    { x: 680, y: 450, width: 120, height: 50 }
+                ],
+                collectibles: [
+                    { x: 80, y: 150, value: 1 },
+                    { x: 240, y: 230, value: 1 },
+                    { x: 420, y: 150, value: 'x2' },
+                    { x: 600, y: 230, value: 1 },
+                    { x: 720, y: 400, value: 1 },
+                    { x: 300, y: 350, value: -1 },
+                    { x: 480, y: 350, value: -1 }
+                ]
+            },
+            // Level 9 - The pit
+            {
+                name: "The Pit",
+                doorReq: 12,
+                playerStart: { x: 50, y: 100 },
+                door: { x: 720, y: 100 },
+                platforms: [
+                    { x: 0, y: 150, width: 100, height: 20 },
+                    { x: 700, y: 150, width: 100, height: 20 },
+                    { x: 200, y: 250, width: 80, height: 20 },
+                    { x: 360, y: 320, width: 80, height: 20 },
+                    { x: 520, y: 250, width: 80, height: 20 },
+                    { x: 360, y: 180, width: 80, height: 20 }
+                ],
+                collectibles: [
+                    { x: 50, y: 100, value: 1 },
+                    { x: 220, y: 200, value: 1 },
+                    { x: 380, y: 270, value: 'x2' },
+                    { x: 540, y: 200, value: 1 },
+                    { x: 380, y: 130, value: 1 },
+                    { x: 750, y: 100, value: 1 },
+                    { x: 280, y: 350, value: -1 },
+                    { x: 440, y: 350, value: -1 }
+                ]
+            },
+            // Level 10 - Divide and conquer
+            {
+                name: "Divide & Conquer",
+                doorReq: 4,
+                playerStart: { x: 50, y: 400 },
+                door: { x: 720, y: 380 },
+                platforms: [
+                    { x: 0, y: 450, width: 800, height: 50 },
+                    { x: 150, y: 350, width: 100, height: 20 },
+                    { x: 350, y: 280, width: 100, height: 20 },
+                    { x: 550, y: 350, width: 100, height: 20 }
+                ],
+                collectibles: [
+                    { x: 80, y: 400, value: 1 },
+                    { x: 180, y: 300, value: 'x2' },
+                    { x: 280, y: 400, value: 'x2' },
+                    { x: 380, y: 230, value: '/2' },
+                    { x: 480, y: 400, value: 1 },
+                    { x: 580, y: 300, value: 1 },
+                    { x: 200, y: 400, value: -1 }
+                ]
+            },
+            // Level 11 - Math maze
+            {
+                name: "Math Maze",
+                doorReq: 8,
+                playerStart: { x: 50, y: 100 },
+                door: { x: 720, y: 380 },
+                platforms: [
+                    { x: 0, y: 150, width: 120, height: 20 },
+                    { x: 180, y: 220, width: 100, height: 20 },
+                    { x: 340, y: 150, width: 100, height: 20 },
+                    { x: 500, y: 220, width: 100, height: 20 },
+                    { x: 340, y: 300, width: 100, height: 20 },
+                    { x: 180, y: 370, width: 100, height: 20 },
+                    { x: 500, y: 370, width: 100, height: 20 },
+                    { x: 660, y: 450, width: 140, height: 50 }
+                ],
+                collectibles: [
+                    { x: 50, y: 100, value: 1 },
+                    { x: 210, y: 170, value: 'x2' },
+                    { x: 370, y: 100, value: 1 },
+                    { x: 530, y: 170, value: '/2' },
+                    { x: 370, y: 250, value: 'x2' },
+                    { x: 210, y: 320, value: 1 },
+                    { x: 530, y: 320, value: 'x2' },
+                    { x: 720, y: 400, value: -1 },
+                    { x: 280, y: 250, value: -1 }
+                ]
+            },
+            // Level 12 - Final challenge
+            {
+                name: "The Finale",
+                doorReq: 24,
+                playerStart: { x: 400, y: 400 },
+                door: { x: 375, y: 30 },
+                platforms: [
+                    { x: 350, y: 450, width: 100, height: 50 },
+                    { x: 150, y: 400, width: 80, height: 20 },
+                    { x: 570, y: 400, width: 80, height: 20 },
+                    { x: 50, y: 320, width: 80, height: 20 },
+                    { x: 670, y: 320, width: 80, height: 20 },
+                    { x: 150, y: 240, width: 80, height: 20 },
+                    { x: 570, y: 240, width: 80, height: 20 },
+                    { x: 280, y: 180, width: 80, height: 20 },
+                    { x: 440, y: 180, width: 80, height: 20 },
+                    { x: 350, y: 100, width: 100, height: 20 }
+                ],
+                collectibles: [
+                    { x: 170, y: 350, value: 1 },
+                    { x: 590, y: 350, value: 1 },
+                    { x: 70, y: 270, value: 'x2' },
+                    { x: 690, y: 270, value: 'x2' },
+                    { x: 170, y: 190, value: 1 },
+                    { x: 590, y: 190, value: 1 },
+                    { x: 300, y: 130, value: 'x2' },
+                    { x: 460, y: 130, value: '/2' },
+                    { x: 380, y: 50, value: 1 },
+                    { x: 250, y: 400, value: -1 },
+                    { x: 500, y: 400, value: -1 },
+                    { x: 360, y: 250, value: -1 }
+                ]
             }
         ];
 
@@ -388,14 +563,21 @@
             platforms = level.platforms.map(p => ({ ...p }));
 
             // Load collectibles
-            collectibles = level.collectibles.map(c => ({
-                x: c.x,
-                y: c.y,
-                width: collectibleSize,
-                height: collectibleSize,
-                value: c.value,
-                label: c.value > 0 ? '+1' : '-1'
-            }));
+            collectibles = level.collectibles.map(c => {
+                let label;
+                if (c.value === 'x2') label = 'x2';
+                else if (c.value === '/2') label = '/2';
+                else label = c.value > 0 ? '+1' : '-1';
+
+                return {
+                    x: c.x,
+                    y: c.y,
+                    width: collectibleSize,
+                    height: collectibleSize,
+                    value: c.value,
+                    label: label
+                };
+            });
 
             // Reset player
             player.x = level.playerStart.x;
@@ -687,7 +869,14 @@
             // Collectible collision
             for (let i = collectibles.length - 1; i >= 0; i--) {
                 if (checkCollision(player, collectibles[i])) {
-                    player.value += collectibles[i].value;
+                    const c = collectibles[i];
+                    if (c.value === 'x2') {
+                        player.value *= 2;
+                    } else if (c.value === '/2') {
+                        player.value = Math.floor(player.value / 2);
+                    } else {
+                        player.value += c.value;
+                    }
                     collectibles.splice(i, 1);
 
                     // Die if value drops to -1 or lower
@@ -726,9 +915,20 @@
                 ctx.textAlign = 'center';
                 ctx.textBaseline = 'middle';
 
-                // Color based on value
-                ctx.fillStyle = c.value > 0 ? '#ffcc00' : '#ff4466';
-                ctx.shadowColor = c.value > 0 ? '#ffcc00' : '#ff4466';
+                // Color based on value type
+                let color;
+                if (c.value === 'x2') {
+                    color = '#66ffcc'; // Cyan for multiply
+                } else if (c.value === '/2') {
+                    color = '#ff66ff'; // Magenta for divide
+                } else if (c.value > 0) {
+                    color = '#ffcc00'; // Yellow for +1
+                } else {
+                    color = '#ff4466'; // Red for -1
+                }
+
+                ctx.fillStyle = color;
+                ctx.shadowColor = color;
                 ctx.shadowBlur = 10;
                 ctx.fillText(c.label, c.x + c.width / 2, c.y + c.height / 2);
                 ctx.shadowBlur = 0;
@@ -957,9 +1157,11 @@
                 ctx.strokeRect(p.x, p.y, p.width, p.height);
             }
 
-            // Collectible hitboxes (yellow/red based on value)
+            // Collectible hitboxes (colored by type)
             for (const c of collectibles) {
-                ctx.strokeStyle = c.value > 0 ? '#ffcc00' : '#ff4466';
+                if (c.value === 'x2') ctx.strokeStyle = '#66ffcc';
+                else if (c.value === '/2') ctx.strokeStyle = '#ff66ff';
+                else ctx.strokeStyle = c.value > 0 ? '#ffcc00' : '#ff4466';
                 ctx.strokeRect(c.x, c.y, c.width, c.height);
             }
 
