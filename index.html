@@ -737,19 +737,25 @@
         const keys = {
             left: false,
             right: false,
-            jump: false
+            jump: false,
+            enter: false
         };
+
+        // Track if player is at door
+        let atDoor = false;
 
         document.addEventListener('keydown', (e) => {
             if (e.key === 'ArrowLeft' || e.key === 'a' || e.key === 'A') keys.left = true;
             if (e.key === 'ArrowRight' || e.key === 'd' || e.key === 'D') keys.right = true;
             if (e.key === 'ArrowUp' || e.key === 'w' || e.key === 'W' || e.key === ' ') keys.jump = true;
+            if (e.key === 'e' || e.key === 'E') keys.enter = true;
         });
 
         document.addEventListener('keyup', (e) => {
             if (e.key === 'ArrowLeft' || e.key === 'a' || e.key === 'A') keys.left = false;
             if (e.key === 'ArrowRight' || e.key === 'd' || e.key === 'D') keys.right = false;
             if (e.key === 'ArrowUp' || e.key === 'w' || e.key === 'W' || e.key === ' ') keys.jump = false;
+            if (e.key === 'e' || e.key === 'E') keys.enter = false;
             if (e.key === 'Enter') {
                 if (gameState === 'menu') startGame();
                 else if (gameState === 'won') nextLevel();
@@ -787,6 +793,14 @@
                 e.preventDefault();
             }
         }, { passive: false });
+
+        // Touch the canvas to enter door when at door
+        canvas.addEventListener('touchstart', (e) => {
+            if (atDoor && gameState === 'playing') {
+                e.preventDefault();
+                triggerWin();
+            }
+        });
 
         // Collision detection
         function checkCollision(rect1, rect2) {
@@ -885,8 +899,11 @@
                 }
             }
 
-            // Door collision (win condition)
-            if (checkCollision(player, door) && player.value >= doorRequirement) {
+            // Door collision (check if at door)
+            atDoor = checkCollision(player, door) && player.value >= doorRequirement;
+
+            // Enter door with E key
+            if (atDoor && keys.enter) {
                 triggerWin();
             }
         }
@@ -972,6 +989,19 @@
                 ctx.strokeStyle = '#00ff88';
                 ctx.lineWidth = 2;
                 ctx.strokeRect(door.x, door.y, door.width, door.height);
+                ctx.shadowBlur = 0;
+            }
+
+            // Show prompt when at door
+            if (atDoor) {
+                ctx.font = 'bold 20px Arial';
+                ctx.fillStyle = '#00ff88';
+                ctx.textAlign = 'center';
+                ctx.shadowColor = '#00ff88';
+                ctx.shadowBlur = 10;
+                // Different text for touch vs keyboard
+                const isTouchDevice = 'ontouchstart' in window;
+                ctx.fillText(isTouchDevice ? 'TAP DOOR' : 'Press E', door.x + door.width / 2, door.y - 20);
                 ctx.shadowBlur = 0;
             }
         }
