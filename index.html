@@ -553,7 +553,8 @@
 
             // Set door requirement
             doorRequirement = level.doorReq;
-            document.getElementById('doorReqInput').value = doorRequirement;
+            const doorInput = document.getElementById('doorReqInput');
+            if (doorInput) doorInput.value = doorRequirement;
 
             // Set door position
             door.x = level.door.x;
@@ -590,9 +591,6 @@
         function updateDoorReq(value) {
             doorRequirement = parseInt(value) || 1;
         }
-
-        // Initialize first level
-        loadLevel(0);
 
         // Win state
         let hasWon = false;
